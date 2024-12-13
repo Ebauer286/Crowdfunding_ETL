@@ -13,20 +13,20 @@ CREATE TABLE subcategory (
 
 CREATE TABLE contacts (
     contact_id int PRIMARY KEY  NOT NULL,
-    first_name VARCHAR(30)   NOT NULL,
-    last_name VARCHAR(30)   NOT NULL,
+    first_name VARCHAR(40)   NOT NULL,
+    last_name VARCHAR(40)   NOT NULL,
     email VARCHAR(60)   NOT NULL
 
 );
 
 
 -- https://www.postgresql.org/docs/current/datatype-datetime.html
-CREATE TABLE campgaigns (
+CREATE TABLE camgaigns (
     cf_id int PRIMARY KEY  NOT NULL,
     contact_id int   NOT NULL,
 	FOREIGN KEY (contact_id) REFERENCES contacts(contact_id),
-    company_name VARCHAR(30)   NOT NULL,
-    description VARCHAR(30)   NOT NULL,
+    company_name VARCHAR(60)   NOT NULL,
+    description VARCHAR(60)   NOT NULL,
     goal real   NOT NULL,
     pledged real   NOT NULL,
     outcome VARCHAR(30)   NOT NULL,
